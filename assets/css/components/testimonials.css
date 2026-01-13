@@ -9,11 +9,24 @@
 .testimonial {
     padding: var(--space-48);
     border-left: 2px solid var(--color-navy);
-    transition: transform var(--transition-fast);
+    position: relative;
+    transition: all var(--transition-fast);
 }
 
 .testimonial:hover {
-    transform: translateX(4px);
+    transform: translateY(-2px);
+}
+
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 120px;
+    line-height: 1;
+    color: var(--color-gray-light);
+    font-family: Georgia, serif;
+    opacity: 0.3;
 }
 
 .testimonial__quote {

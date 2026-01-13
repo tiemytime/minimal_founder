@@ -26,14 +26,37 @@ body {
     background: rgba(0, 0, 0, 0.02);
 }
 
-/* Full-bleed section for edge-to-edge visual interest (PRD 1.3) */
+/* Full-bleed section for edge-to-edge visual interest */
 .section--full-bleed {
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(0, 0, 0, 0.01) 50%,
-        transparent 100%
-    );
+    background: var(--color-white);
+    position: relative;
+}
+
+.section--full-bleed.section--gray {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Edge-to-edge visual enhancement */
+.section--full-bleed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-gray-light);
+    opacity: 0.5;
+}
+
+.section--full-bleed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-gray-light);
+    opacity: 0.5;
 }
 
 /* Elegant section dividers for visual hierarchy */

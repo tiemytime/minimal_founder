@@ -22,6 +22,17 @@
     position: relative;
     z-index: 1;
     text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.process__step:hover {
+    transform: translateY(-2px);
+}
+
+.process__step:hover .process__number {
+    transform: scale(1.05);
+    background: var(--color-navy);
+    color: var(--color-white);
 }
 
 .process__number {

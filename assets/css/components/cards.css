@@ -8,12 +8,13 @@
 
 .card {
     padding: var(--space-48);
-    transition: transform var(--transition-fast);
+    transition: all var(--transition-fast);
     background: var(--color-white);
 }
 
 .card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    background: var(--color-white);
 }
 
 .card__title {

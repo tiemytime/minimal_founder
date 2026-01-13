@@ -68,12 +68,13 @@
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
-    transition: opacity var(--transition-fast);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .nav__cta:hover,
 .nav__cta:focus {
     opacity: 0.9;
+    transform: scale(1.02);
 }
 
 .nav__toggle {

@@ -52,16 +52,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero__content">
             <h1 class="hero__title">Build exceptional teams with confidence</h1>
             <p class="hero__description">We combine psychology and precision to help you find founders who will drive your vision forward.</p>
             <a href="#" class="btn btn--primary">Get Started</a>
         </div>
+        <button class="hero__scroll-hint" id="scrollHint" aria-label="Scroll down">
+            <span class="hero__scroll-arrow"></span>
+        </button>
     </section>
 
     <!-- Problem Section -->
-    <section class="section section--gray" id="problem">
+    <section class="section section--full-bleed section--gray" id="problem">
         <div class="container">
             <div class="section__header fade-in">
                 <h2 class="section__title">The Challenge of Finding Great Founders</h2>
@@ -139,7 +142,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="section section--gray">
+    <section class="section section--full-bleed section--gray">
         <div class="container">
             <div class="section__header fade-in">
                 <h2 class="section__title">Founder Stories</h2>
@@ -204,5 +207,6 @@
     <!-- Scripts -->
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/scroll-animation.js"></script>
+    <script src="assets/js/scroll-hint.js"></script>
 </body>
 </html>
