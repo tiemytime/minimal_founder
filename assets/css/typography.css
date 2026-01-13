@@ -1,0 +1,60 @@
+/* Typography System - Noto Sans */
+body {
+    font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+/* Headings - Desktop */
+h1 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+}
+
+/* Body text */
+p {
+    max-width: 65ch;
+}
+
+/* Small text */
+.text-small {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+}

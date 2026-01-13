@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML & Body */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* Media Elements */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Elements */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Text Elements */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Lists */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Buttons */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus Visible for Accessibility */
+:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+}
