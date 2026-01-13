@@ -1,15 +1,49 @@
 /* Approach Section Component */
 .approach-content {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    padding: var(--space-64) var(--space-48);
+}
+
+.approach-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--color-navy) 50%, transparent);
+    opacity: 0.2;
+}
+
+.approach-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to top, transparent, var(--color-navy) 50%, transparent);
+    opacity: 0.2;
 }
 
 .approach-text {
     font-size: 20px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--color-gray-dark);
-    margin: 0 auto var(--space-32);
+    margin: 0 auto var(--space-40);
+    /* More generous spacing */
+    position: relative;
+}
+
+.approach-text:first-child {
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 22px;
 }
 
 .approach-text:last-child {
@@ -17,6 +51,10 @@
 }
 
 @media (max-width: 768px) {
+    .approach-content {
+        padding: var(--space-32);
+    }
+
     .approach-text {
         font-size: 18px;
     }

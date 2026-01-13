@@ -19,7 +19,8 @@ body {
 
 /* Section */
 .section {
-    padding: var(--space-128) 0;
+    padding: var(--space-160) 0;
+    /* PRD: At least 120px between sections - using 160px for premium feel */
 }
 
 .section--gray {
@@ -60,21 +61,36 @@ body {
 }
 
 /* Elegant section dividers for visual hierarchy */
-.section + .section:not(.section--gray) {
+.section+.section:not(.section--gray) {
     border-top: 1px solid var(--color-gray-light);
 }
 
 .section__header {
     text-align: center;
-    margin-bottom: var(--space-96);
+    margin-bottom: var(--space-128);
+    /* More generous whitespace */
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+}
+
+.section__header::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--space-128) * -0.4);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-navy), transparent);
+    opacity: 0.25;
 }
 
 .section__title {
     margin-bottom: var(--space-24);
     color: var(--color-black);
+    position: relative;
 }
 
 .section__subtitle {
@@ -86,13 +102,14 @@ body {
 
 @media (max-width: 768px) {
     .section {
-        padding: var(--space-96) 0;
+        padding: var(--space-128) 0;
+        /* Generous spacing on mobile too */
     }
-    
+
     .section__header {
-        margin-bottom: var(--space-64);
+        margin-bottom: var(--space-80);
     }
-    
+
     .section__subtitle {
         font-size: 18px;
     }

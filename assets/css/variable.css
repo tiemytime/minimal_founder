@@ -4,15 +4,16 @@
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-navy: #0A192F;
-    
+
     /* Grays derived from black with opacity */
     --color-gray-light: rgba(0, 0, 0, 0.1);
     --color-gray-medium: rgba(0, 0, 0, 0.4);
     --color-gray-dark: rgba(0, 0, 0, 0.6);
-    
+
     /* Spacing System - 8px base unit */
     --space-8: 8px;
     --space-16: 16px;
+    --space-20: 20px;
     --space-24: 24px;
     --space-32: 32px;
     --space-40: 40px;
@@ -24,14 +25,14 @@
     --space-160: 160px;
     --space-192: 192px;
     --space-256: 256px;
-    
+
     /* Layout */
     --container-max: 1200px;
-    
+
     /* Transitions */
     --transition-fast: 300ms;
     --transition-medium: 600ms;
-    
+
     /* Z-index layers */
     --z-nav: 1000;
     --z-overlay: 999;

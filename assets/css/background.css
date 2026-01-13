@@ -1,0 +1,89 @@
+/* Premium Background Treatment - PRD Compliant */
+
+/* Scroll Progress Indicator - Minimal & Elegant */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+            var(--color-navy) 0%,
+            var(--color-navy) 100%);
+    z-index: calc(var(--z-nav) + 1);
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 8px rgba(10, 25, 47, 0.3);
+}
+
+/* Subtle gradient overlay for depth */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 10%,
+            rgba(10, 25, 47, 0.02) 0%,
+            transparent 40%),
+        radial-gradient(ellipse at 80% 90%,
+            rgba(10, 25, 47, 0.015) 0%,
+            transparent 40%);
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* Edge-to-edge accent lines for visual interest */
+.page-accent {
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Top accent line */
+.page-accent--top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(10, 25, 47, 0.08) 20%,
+            rgba(10, 25, 47, 0.08) 80%,
+            transparent);
+}
+
+/* Vertical accent lines - subtle guides */
+.page-accent--left {
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg,
+            transparent,
+            rgba(10, 25, 47, 0.03) 20%,
+            rgba(10, 25, 47, 0.03) 80%,
+            transparent);
+}
+
+.page-accent--right {
+    top: 0;
+    right: 10%;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg,
+            transparent,
+            rgba(10, 25, 47, 0.03) 20%,
+            rgba(10, 25, 47, 0.03) 80%,
+            transparent);
+}
+
+/* Responsive: Hide vertical accents on mobile */
+@media (max-width: 768px) {
+
+    .page-accent--left,
+    .page-accent--right {
+        display: none;
+    }
+}

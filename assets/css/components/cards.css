@@ -2,29 +2,55 @@
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-48);
-    margin-top: var(--space-48);
+    gap: var(--space-64);
+    /* More generous spacing between cards */
+    margin-top: var(--space-64);
 }
 
 .card {
-    padding: var(--space-48);
+    padding: var(--space-64) var(--space-48);
+    /* More vertical padding */
     transition: all var(--transition-fast);
     background: var(--color-white);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-navy);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-medium);
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    /* More pronounced lift */
     background: var(--color-white);
+    border-color: rgba(10, 25, 47, 0.06);
+    box-shadow: 0 12px 32px rgba(10, 25, 47, 0.08);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
 }
 
 .card__title {
-    margin-bottom: var(--space-16);
+    margin-bottom: var(--space-24);
+    /* More space after title */
     color: var(--color-navy);
 }
 
 .card__description {
     color: var(--color-gray-dark);
-    line-height: 1.7;
+    line-height: 1.8;
+    /* Better readability */
 }
 
 @media (max-width: 768px) {
@@ -33,7 +59,7 @@
         gap: var(--space-32);
         margin-top: var(--space-32);
     }
-    
+
     .card {
         padding: var(--space-32);
     }

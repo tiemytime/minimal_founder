@@ -1,52 +1,90 @@
 /* Button Component */
 .btn {
     display: inline-block;
-    padding: 0 var(--space-48);
+    padding: 0 var(--space-64);
+    /* More generous horizontal padding */
     font-family: inherit;
-    font-size: inherit;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: all var(--transition-fast);
-    height: 48px;
-    line-height: 48px;
-    letter-spacing: 0.01em;
+    transition: all var(--transition-medium);
+    height: 52px;
+    /* Slightly taller for more presence */
+    line-height: 52px;
+    letter-spacing: -0.01em;
+    /* PRD: headlines use -0.01em */
+    position: relative;
 }
 
 .btn--primary {
     background: var(--color-navy);
     color: var(--color-white);
+    box-shadow: 0 2px 8px rgba(10, 25, 47, 0.1);
 }
 
 .btn--primary:hover,
 .btn--primary:focus {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(10, 25, 47, 0.25);
 }
 
 .btn--primary:active {
-    transform: scale(0.98);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(10, 25, 47, 0.2);
 }
 
 .btn--secondary {
     background: transparent;
     color: var(--color-navy);
     border: 2px solid var(--color-navy);
-    line-height: 44px;
+    line-height: 48px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn--secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-navy);
+    transition: width var(--transition-medium);
+    z-index: -1;
+}
+
+.btn--secondary:hover::before,
+.btn--secondary:focus::before {
+    width: 100%;
 }
 
 .btn--secondary:hover,
 .btn--secondary:focus {
-    background: var(--color-navy);
     color: var(--color-white);
+    border-color: var(--color-navy);
+    transform: translateY(-2px);
+}
+
+.btn--secondary:active {
+    transform: translateY(0);
 }
 
 /* Touch-friendly on mobile */
 @media (max-width: 768px) {
     .btn {
         min-width: 44px;
-        min-height: 44px;
-        padding: 0 var(--space-40);
+        min-height: 48px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 var(--space-48);
+        font-size: 16px;
+    }
+
+    .btn--secondary {
+        line-height: 44px;
     }
 }

@@ -1,53 +1,54 @@
 /* CTA Section Component */
 .cta-section {
     text-align: center;
-    padding: var(--space-192) var(--space-48);
+    padding: var(--space-256) var(--space-48);
+    /* Maximum whitespace for premium feel */
     background: var(--color-white);
     border-top: 1px solid var(--color-gray-light);
     position: relative;
 }
 
-/* Subtle edge-to-edge visual accent */
+/* Subtle visual interest without breaking PRD */
 .cta-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--color-gray-light);
-}
-
-.cta-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--color-gray-light);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    background: radial-gradient(ellipse at 50% 50%,
+            rgba(10, 25, 47, 0.015) 0%,
+            transparent 60%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cta-section__content {
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-section h2 {
-    margin-bottom: var(--space-24);
+    margin-bottom: var(--space-32);
     font-size: 48px;
 }
 
 .cta-section p {
-    margin: 0 auto var(--space-64);
+    margin: 0 auto var(--space-80);
+    /* More space before buttons */
     color: var(--color-gray-dark);
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .cta-section__actions {
     display: flex;
-    gap: var(--space-24);
+    gap: var(--space-32);
+    /* More generous gap */
     justify-content: center;
     align-items: center;
 }
@@ -56,21 +57,21 @@
     .cta-section {
         padding: var(--space-128) var(--space-24);
     }
-    
+
     .cta-section h2 {
         font-size: 32px;
     }
-    
+
     .cta-section p {
         font-size: 18px;
         margin-bottom: var(--space-48);
     }
-    
+
     .cta-section__actions {
         flex-direction: column;
         gap: var(--space-16);
     }
-    
+
     .cta-section__actions .btn {
         width: 100%;
         max-width: 280px;
