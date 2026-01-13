@@ -2,19 +2,32 @@
 .cta-section {
     text-align: center;
     padding: var(--space-160) var(--space-48);
+    background: var(--color-white);
+    border-top: 1px solid var(--color-gray-light);
 }
 
 .cta-section h2 {
-    margin-bottom: var(--space-32);
+    margin-bottom: var(--space-24);
+    font-size: 48px;
 }
 
 .cta-section p {
     margin: 0 auto var(--space-48);
     color: var(--color-gray-dark);
+    font-size: 20px;
+    max-width: 600px;
 }
 
 @media (max-width: 768px) {
     .cta-section {
         padding: var(--space-96) var(--space-24);
+    }
+    
+    .cta-section h2 {
+        font-size: 32px;
+    }
+    
+    .cta-section p {
+        font-size: 18px;
     }
 }

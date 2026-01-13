@@ -10,20 +10,33 @@
 }
 
 .hero__content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hero__title {
-    margin-bottom: var(--space-32);
+    margin-bottom: var(--space-40);
 }
 
 .hero__description {
-    margin: 0 auto var(--space-48);
+    margin: 0 auto var(--space-64);
     color: var(--color-gray-dark);
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 700px;
 }
 
 @media (max-width: 768px) {
     .hero {
         padding: var(--space-128) var(--space-24);
+        min-height: calc(100vh - 60px);
+    }
+    
+    .hero__title {
+        margin-bottom: var(--space-32);
+    }
+    
+    .hero__description {
+        font-size: 18px;
+        margin-bottom: var(--space-48);
     }
 }

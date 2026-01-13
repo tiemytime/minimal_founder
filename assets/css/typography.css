@@ -19,14 +19,14 @@ h2 {
     font-size: 36px;
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
 }
 
 h3 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
 }
 
 /* Body text */
@@ -38,6 +38,29 @@ p {
 .text-small {
     font-size: 14px;
     line-height: 1.5;
+}
+
+/* Link styles - PRD compliant */
+a:not(.btn):not(.nav__link):not(.nav__logo):not(.footer__link) {
+    color: var(--color-navy);
+    text-decoration: none;
+    position: relative;
+}
+
+a:not(.btn):not(.nav__link):not(.nav__logo):not(.footer__link)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-navy);
+    transition: width 300ms ease;
+}
+
+a:not(.btn):not(.nav__link):not(.nav__logo):not(.footer__link):hover::after,
+a:not(.btn):not(.nav__link):not(.nav__logo):not(.footer__link):focus::after {
+    width: 100%;
 }
 
 /* Mobile Typography */
