@@ -1,9 +1,15 @@
 /* CTA Section Component */
 .cta-section {
     text-align: center;
-    padding: var(--space-160) var(--space-48);
+    padding: var(--space-192) var(--space-48);
     background: var(--color-white);
     border-top: 1px solid var(--color-gray-light);
+    position: relative;
+}
+
+.cta-section__content {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .cta-section h2 {
@@ -12,15 +18,22 @@
 }
 
 .cta-section p {
-    margin: 0 auto var(--space-48);
+    margin: 0 auto var(--space-64);
     color: var(--color-gray-dark);
     font-size: 20px;
-    max-width: 600px;
+    line-height: 1.6;
+}
+
+.cta-section__actions {
+    display: flex;
+    gap: var(--space-24);
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
     .cta-section {
-        padding: var(--space-96) var(--space-24);
+        padding: var(--space-128) var(--space-24);
     }
     
     .cta-section h2 {
@@ -29,5 +42,16 @@
     
     .cta-section p {
         font-size: 18px;
+        margin-bottom: var(--space-48);
+    }
+    
+    .cta-section__actions {
+        flex-direction: column;
+        gap: var(--space-16);
+    }
+    
+    .cta-section__actions .btn {
+        width: 100%;
+        max-width: 280px;
     }
 }

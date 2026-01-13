@@ -47,7 +47,8 @@
 .process__description {
     font-size: 16px;
     color: var(--color-gray-dark);
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0;
 }
 
 @media (max-width: 768px) {
@@ -71,5 +72,9 @@
     .process__number {
         margin: 0;
         flex-shrink: 0;
+    }
+    
+    .process__content {
+        flex: 1;
     }
 }

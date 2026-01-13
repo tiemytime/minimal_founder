@@ -7,21 +7,45 @@
     text-align: center;
     padding: var(--space-160) var(--space-48);
     background: var(--color-white);
+    position: relative;
+}
+
+/* Subtle depth through spacing (PRD compliant) */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-gray-light);
 }
 
 .hero__content {
     max-width: 900px;
+    animation: fadeInUp 800ms ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero__title {
-    margin-bottom: var(--space-40);
+    margin-bottom: var(--space-48);
 }
 
 .hero__description {
     margin: 0 auto var(--space-64);
     color: var(--color-gray-dark);
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 700px;
 }
 
@@ -32,11 +56,12 @@
     }
     
     .hero__title {
-        margin-bottom: var(--space-32);
+        margin-bottom: var(--space-40);
     }
     
     .hero__description {
         font-size: 18px;
         margin-bottom: var(--space-48);
+        line-height: 1.6;
     }
 }

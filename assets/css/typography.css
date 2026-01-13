@@ -5,6 +5,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-black);
+    letter-spacing: 0; /* PRD: 0 for body text */
 }
 
 /* Headings - Desktop */
@@ -32,6 +33,7 @@ h3 {
 /* Body text */
 p {
     max-width: 65ch;
+    letter-spacing: 0; /* PRD: 0 for body text */
 }
 
 /* Small text */

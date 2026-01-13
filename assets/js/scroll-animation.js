@@ -21,10 +21,15 @@
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
+                // Get stagger delay from data attribute (PRD: 100ms between elements)
+                const staggerIndex = entry.target.getAttribute('data-stagger');
+                const baseDelay = 100;
+                const staggerDelay = staggerIndex ? parseInt(staggerIndex) * baseDelay : 0;
+                
                 // Add visible class with stagger effect
                 setTimeout(function() {
                     entry.target.classList.add('visible');
-                }, 100);
+                }, staggerDelay);
                 
                 // Stop observing once animated
                 observer.unobserve(entry.target);

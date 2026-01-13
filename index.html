@@ -68,15 +68,15 @@
                 <p class="section__subtitle">Traditional hiring fails to capture what makes founders exceptional</p>
             </div>
             <div class="cards">
-                <div class="card fade-in">
+                <div class="card fade-in" data-stagger="1">
                     <h3 class="card__title">Surface-Level Evaluation</h3>
                     <p class="card__description">Resumes and interviews only scratch the surface of a founder's true capabilities and potential.</p>
                 </div>
-                <div class="card fade-in">
+                <div class="card fade-in" data-stagger="2">
                     <h3 class="card__title">Cultural Misalignment</h3>
                     <p class="card__description">Without deep understanding, even talented founders can fail to mesh with your company's values.</p>
                 </div>
-                <div class="card fade-in">
+                <div class="card fade-in" data-stagger="3">
                     <h3 class="card__title">High Stakes</h3>
                     <p class="card__description">A wrong hire at the leadership level can cost months of progress and significant resources.</p>
                 </div>
@@ -99,28 +99,40 @@
     </section>
 
     <!-- Process Timeline -->
-    <section class="section" id="process">
+    <section class="section section--full-bleed" id="process">
         <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">How We Work</h2>
+                <p class="section__subtitle">A proven process refined through years of experience</p>
+            </div>
             <div class="process">
-                <div class="process__step fade-in">
+                <div class="process__step fade-in" data-stagger="1">
                     <div class="process__number">1</div>
-                    <h3 class="process__title">Discovery</h3>
-                    <p class="process__description">Deep dive into your needs, culture, and vision for the role.</p>
+                    <div class="process__content">
+                        <h3 class="process__title">Discovery</h3>
+                        <p class="process__description">Deep dive into your needs, culture, and vision for the role.</p>
+                    </div>
                 </div>
-                <div class="process__step fade-in">
+                <div class="process__step fade-in" data-stagger="2">
                     <div class="process__number">2</div>
-                    <h3 class="process__title">Assessment</h3>
-                    <p class="process__description">Comprehensive evaluation of candidates beyond traditional metrics.</p>
+                    <div class="process__content">
+                        <h3 class="process__title">Assessment</h3>
+                        <p class="process__description">Comprehensive evaluation of candidates beyond traditional metrics.</p>
+                    </div>
                 </div>
-                <div class="process__step fade-in">
+                <div class="process__step fade-in" data-stagger="3">
                     <div class="process__number">3</div>
-                    <h3 class="process__title">Matching</h3>
-                    <p class="process__description">Strategic pairing based on compatibility and complementary strengths.</p>
+                    <div class="process__content">
+                        <h3 class="process__title">Matching</h3>
+                        <p class="process__description">Strategic pairing based on compatibility and complementary strengths.</p>
+                    </div>
                 </div>
-                <div class="process__step fade-in">
+                <div class="process__step fade-in" data-stagger="4">
                     <div class="process__number">4</div>
-                    <h3 class="process__title">Integration</h3>
-                    <p class="process__description">Ongoing support to ensure successful onboarding and alignment.</p>
+                    <div class="process__content">
+                        <h3 class="process__title">Integration</h3>
+                        <p class="process__description">Ongoing support to ensure successful onboarding and alignment.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,12 +145,12 @@
                 <h2 class="section__title">Founder Stories</h2>
             </div>
             <div class="testimonials">
-                <div class="testimonial fade-in">
+                <div class="testimonial fade-in" data-stagger="1">
                     <p class="testimonial__quote">"The process revealed insights about potential co-founders that I never would have discovered through traditional interviews. It saved us from making a costly mistake."</p>
                     <div class="testimonial__author">Sarah Chen</div>
                     <div class="testimonial__role">CEO, TechVenture</div>
                 </div>
-                <div class="testimonial fade-in">
+                <div class="testimonial fade-in" data-stagger="2">
                     <p class="testimonial__quote">"Within three months, we found a CTO who not only had the technical skills but truly aligned with our mission and values. The difference has been transformative."</p>
                     <div class="testimonial__author">Marcus Rodriguez</div>
                     <div class="testimonial__role">Founder, InnovateLabs</div>
@@ -168,10 +180,13 @@
 
     <!-- Final CTA -->
     <section class="cta-section">
-        <div class="container">
-            <h2>Ready to build your team?</h2>
-            <p>Start with a brief conversation about your needs and vision.</p>
-            <a href="#" class="btn btn--primary">Start Your Brief</a>
+        <div class="cta-section__content">
+            <h2 class="fade-in">Ready to build your team?</h2>
+            <p class="fade-in">Start with a brief conversation about your needs and vision.</p>
+            <div class="cta-section__actions fade-in">
+                <a href="#contact" class="btn btn--primary">Start Your Brief</a>
+                <a href="#process" class="btn btn--secondary">Learn More</a>
+            </div>
         </div>
     </section>
 
