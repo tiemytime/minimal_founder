@@ -1,0 +1,20 @@
+/* CTA Section Component */
+.cta-section {
+    text-align: center;
+    padding: var(--space-160) var(--space-48);
+}
+
+.cta-section h2 {
+    margin-bottom: var(--space-32);
+}
+
+.cta-section p {
+    margin: 0 auto var(--space-48);
+    color: var(--color-gray-dark);
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: var(--space-96) var(--space-24);
+    }
+}

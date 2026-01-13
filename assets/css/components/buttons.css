@@ -1,0 +1,43 @@
+/* Button Component */
+.btn {
+    display: inline-block;
+    padding: 0 var(--space-48);
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    height: 48px;
+    line-height: 48px;
+}
+
+.btn--primary {
+    background: var(--color-navy);
+    color: var(--color-white);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    transform: scale(1.02);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--color-navy);
+    border: 2px solid var(--color-navy);
+    line-height: 44px;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+    opacity: 0.8;
+}
+
+/* Touch-friendly on mobile */
+@media (max-width: 768px) {
+    .btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}

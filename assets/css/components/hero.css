@@ -1,0 +1,29 @@
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-160) var(--space-48);
+    background: var(--color-white);
+}
+
+.hero__content {
+    max-width: 800px;
+}
+
+.hero__title {
+    margin-bottom: var(--space-32);
+}
+
+.hero__description {
+    margin: 0 auto var(--space-48);
+    color: var(--color-gray-dark);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--space-128) var(--space-24);
+    }
+}

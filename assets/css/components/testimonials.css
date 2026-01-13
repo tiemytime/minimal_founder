@@ -1,0 +1,39 @@
+/* Testimonials Component */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-64);
+}
+
+.testimonial {
+    padding: var(--space-48);
+}
+
+.testimonial__quote {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: var(--space-32);
+    color: var(--color-black);
+}
+
+.testimonial__author {
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: var(--space-8);
+}
+
+.testimonial__role {
+    font-size: 14px;
+    color: var(--color-gray-medium);
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: var(--space-48);
+    }
+    
+    .testimonial {
+        padding: var(--space-32);
+    }
+}

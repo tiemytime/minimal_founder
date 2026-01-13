@@ -17,11 +17,144 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components/navigation.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/components/hero.css">
+    <link rel="stylesheet" href="assets/css/components/buttons.css">
+    <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/components/process.css">
+    <link rel="stylesheet" href="assets/css/components/testimonials.css">
+    <link rel="stylesheet" href="assets/css/components/team.css">
+    <link rel="stylesheet" href="assets/css/components/cta.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+</head>
 </head>
 <body>
     <h1>Premium Minimal Website</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">Brand</a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#problem" class="nav__link">Problem</a></li>
+                <li><a href="#process" class="nav__link">Process</a></li>
+                <li><a href="#team" class="nav__link">Team</a></li>
+                <li><button class="nav__cta">Start Brief</button></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav__toggle-icon">☰</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Build exceptional teams with confidence</h1>
+            <p class="hero__description">We combine psychology and precision to help you find founders who will drive your vision forward.</p>
+            <a href="#" class="btn btn--primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section section--gray" id="problem">
+        <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">The Challenge of Finding Great Founders</h2>
+                <p class="section__subtitle">Traditional hiring fails to capture what makes founders exceptional</p>
+            </div>
+            <div class="cards">
+                <div class="card fade-in">
+                    <h3 class="card__title">Surface-Level Evaluation</h3>
+                    <p class="card__description">Resumes and interviews only scratch the surface of a founder's true capabilities and potential.</p>
+                </div>
+                <div class="card fade-in">
+                    <h3 class="card__title">Cultural Misalignment</h3>
+                    <p class="card__description">Without deep understanding, even talented founders can fail to mesh with your company's values.</p>
+                </div>
+                <div class="card fade-in">
+                    <h3 class="card__title">High Stakes</h3>
+                    <p class="card__description">A wrong hire at the leadership level can cost months of progress and significant resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">Our Approach</h2>
+                <p class="section__subtitle">Psychology-driven assessment meets structured process</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="process">
+                <div class="process__step fade-in">
+                    <div class="process__number">1</div>
+                    <h3 class="process__title">Discovery</h3>
+                    <p class="process__description">Deep dive into your needs, culture, and vision for the role.</p>
+                </div>
+                <div class="process__step fade-in">
+                    <div class="process__number">2</div>
+                    <h3 class="process__title">Assessment</h3>
+                    <p class="process__description">Comprehensive evaluation of candidates beyond traditional metrics.</p>
+                </div>
+                <div class="process__step fade-in">
+                    <div class="process__number">3</div>
+                    <h3 class="process__title">Matching</h3>
+                    <p class="process__description">Strategic pairing based on compatibility and complementary strengths.</p>
+                </div>
+                <div class="process__step fade-in">
+                    <div class="process__number">4</div>
+                    <h3 class="process__title">Integration</h3>
+                    <p class="process__description">Ongoing support to ensure successful onboarding and alignment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header fade-in">
+                <h2 class="section__title">Founder Stories</h2>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial fade-in">
+                    <p class="testimonial__quote">"The process revealed insights about potential co-founders that I never would have discovered through traditional interviews. It saved us from making a costly mistake."</p>
+                    <div class="testimonial__author">Sarah Chen</div>
+                    <div class="testimonial__role">CEO, TechVenture</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p class="testimonial__quote">"Within three months, we found a CTO who not only had the technical skills but truly aligned with our mission and values. The difference has been transformative."</p>
+                    <div class="testimonial__author">Marcus Rodriguez</div>
+                    <div class="testimonial__role">Founder, InnovateLabs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="footer__links">
+            <li><a href="#" class="footer__link">About</a></li>
+            <li><a href="#" class="footer__link">Process</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Privacy</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; 2026 Brand. All rights reserved.</p>
+    </footer>
+
+
 </body>
 </html>
