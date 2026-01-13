@@ -50,12 +50,10 @@
 
 @keyframes scrollBounce {
     0%, 100% { 
-        opacity: 0.4; 
-        transform: translateY(-8px); 
+        opacity: 0.4;
     }
     50% { 
-        opacity: 1; 
-        transform: translateY(0); 
+        opacity: 1;
     }
 }
 

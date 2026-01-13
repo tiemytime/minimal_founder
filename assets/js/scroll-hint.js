@@ -13,15 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
         });
-        
-        // Hide scroll hint after user starts scrolling
-        let hasScrolled = false;
-        window.addEventListener('scroll', function() {
-            if (!hasScrolled && window.scrollY > 100) {
-                hasScrolled = true;
-                scrollHint.style.opacity = '0';
-                scrollHint.style.pointerEvents = 'none';
-            }
-        });
     }
 });

@@ -3,6 +3,7 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     const navLinkItems = document.querySelectorAll('.nav__link');
+    const nav = document.querySelector('.nav');
     
     if (!navToggle || !navLinks) return;
     
@@ -46,4 +47,18 @@
             navToggle.setAttribute('aria-expanded', 'false');
         }
     });
+    
+    // Add scrolled class to nav on scroll (for refined styling)
+    let lastScroll = 0;
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    }, { passive: true });
 })();
