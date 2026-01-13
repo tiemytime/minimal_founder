@@ -1,0 +1,35 @@
+/* Cards Component */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-48);
+}
+
+.card {
+    padding: var(--space-48);
+    transition: transform var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card__title {
+    margin-bottom: var(--space-16);
+    color: var(--color-navy);
+}
+
+.card__description {
+    color: var(--color-gray-dark);
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        gap: var(--space-32);
+    }
+    
+    .card {
+        padding: var(--space-32);
+    }
+}
