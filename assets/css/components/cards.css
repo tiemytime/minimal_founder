@@ -1,18 +1,17 @@
-/* Cards Component */
+/* Cards Component - Professional Polish */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-64);
-    /* More generous spacing between cards */
     margin-top: var(--space-64);
 }
 
 .card {
     padding: var(--space-64) var(--space-48);
-    /* More vertical padding */
-    transition: all var(--transition-fast);
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--color-white);
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
     position: relative;
 }
 
@@ -22,17 +21,18 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 3px;
     background: var(--color-navy);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform var(--transition-medium);
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px 2px 0 0;
 }
 
 .card:hover {
     transform: translateY(-6px);
     background: var(--color-white);
-    border-color: rgba(10, 25, 47, 0.12);
+    border-color: rgba(10, 25, 47, 0.15);
 }
 
 .card:hover::before {
@@ -41,14 +41,14 @@
 
 .card__title {
     margin-bottom: var(--space-24);
-    /* More space after title */
     color: var(--color-navy);
+    letter-spacing: -0.01em;
 }
 
 .card__description {
     color: var(--color-gray-dark);
     line-height: 1.8;
-    /* Better readability */
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {

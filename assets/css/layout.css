@@ -91,6 +91,7 @@ body {
     margin-bottom: var(--space-24);
     color: var(--color-black);
     position: relative;
+    letter-spacing: -0.02em;
 }
 
 .section__subtitle {
@@ -98,6 +99,7 @@ body {
     margin: 0 auto;
     font-size: 20px;
     line-height: 1.6;
+    opacity: 0.85;
 }
 
 @media (max-width: 768px) {

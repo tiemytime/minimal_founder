@@ -1,25 +1,28 @@
-/* Testimonials Component */
+/* Testimonials Component - Professional Polish */
 .testimonials {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-80);
-    /* More generous spacing */
     margin-top: var(--space-64);
 }
 
 .testimonial {
     padding: var(--space-64) var(--space-48);
-    /* More vertical padding */
     border-left: 3px solid var(--color-navy);
+    border-radius: 2px;
     position: relative;
-    transition: all var(--transition-medium);
-    background: rgba(255, 255, 255, 0.5);
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    border-right: 1px solid rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .testimonial:hover {
     transform: translateX(8px);
-    border-left-width: 5px;
-    background: rgba(255, 255, 255, 0.8);
+    border-left-width: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--color-navy) rgba(0, 0, 0, 0.04) rgba(0, 0, 0, 0.04) rgba(0, 0, 0, 0.04);
 }
 
 .testimonial::before {
@@ -31,23 +34,23 @@
     line-height: 1;
     color: var(--color-gray-light);
     font-family: Georgia, serif;
-    opacity: 0.2;
+    opacity: 0.15;
     transition: opacity var(--transition-fast);
 }
 
 .testimonial:hover::before {
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 .testimonial__quote {
     font-size: 20px;
     line-height: 1.8;
-    /* Better readability */
     margin-bottom: var(--space-40);
     color: var(--color-black);
     font-style: italic;
     position: relative;
     z-index: 1;
+    opacity: 0.95;
 }
 
 .testimonial__author {
@@ -56,12 +59,14 @@
     margin-bottom: var(--space-8);
     font-size: 17px;
     font-style: normal;
+    letter-spacing: -0.01em;
 }
 
 .testimonial__role {
     font-size: 15px;
     color: var(--color-gray-medium);
     font-style: normal;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {

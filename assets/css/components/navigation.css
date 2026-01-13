@@ -1,4 +1,4 @@
-/* Navigation Component */
+/* Navigation Component - Professional Polish */
 .nav {
     position: fixed;
     top: 0;
@@ -9,15 +9,15 @@
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     z-index: var(--z-nav);
     padding: var(--space-32) 0;
-    border-bottom: 1px solid transparent;
-    transition: all var(--transition-medium);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Enhanced scrolled state - PRD compliant */
 .nav.scrolled {
     background: rgba(255, 255, 255, 0.95);
     padding: var(--space-20) 0;
-    border-bottom-color: rgba(0, 0, 0, 0.08);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Removed gradient - PRD compliant */
@@ -117,11 +117,12 @@
     color: var(--color-white);
     padding: var(--space-16) var(--space-48);
     border: 2px solid var(--color-navy);
+    border-radius: 2px;
     cursor: pointer;
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
-    transition: all var(--transition-medium);
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
@@ -129,6 +130,7 @@
 .nav__cta:focus {
     opacity: 0.9;
     transform: translateY(-2px);
+    border-color: rgba(10, 25, 47, 0.8);
 }
 
 .nav__cta:active {
