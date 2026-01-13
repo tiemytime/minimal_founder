@@ -21,18 +21,18 @@
 .btn--primary {
     background: var(--color-navy);
     color: var(--color-white);
-    box-shadow: 0 2px 8px rgba(10, 25, 47, 0.1);
+    border: 2px solid var(--color-navy);
 }
 
 .btn--primary:hover,
 .btn--primary:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(10, 25, 47, 0.25);
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 .btn--primary:active {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(10, 25, 47, 0.2);
+    transform: scale(1);
+    opacity: 1;
 }
 
 .btn--secondary {

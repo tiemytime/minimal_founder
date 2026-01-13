@@ -14,14 +14,10 @@
     content: '';
     position: absolute;
     top: 32px;
-    left: 8%;
-    right: 8%;
+    left: 12%;
+    right: 12%;
     height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            var(--color-gray-light) 10%,
-            var(--color-gray-light) 90%,
-            transparent);
+    background: var(--color-gray-light);
     z-index: 0;
 }
 
@@ -37,8 +33,7 @@
 }
 
 .process__step:hover .process__number {
-    transform: scale(1.1);
-    box-shadow: 0 12px 32px rgba(10, 25, 47, 0.3);
+    transform: scale(1.08);
 }
 
 .process__step:hover .process__number::before {
@@ -48,7 +43,6 @@
 
 .process__number {
     width: 72px;
-    /* Slightly larger for more presence */
     height: 72px;
     border-radius: 50%;
     background: var(--color-navy);
@@ -59,7 +53,7 @@
     font-size: 28px;
     font-weight: 600;
     margin: 0 auto var(--space-32);
-    box-shadow: 0 6px 20px rgba(10, 25, 47, 0.2);
+    border: 3px solid var(--color-navy);
     transition: all var(--transition-medium);
     position: relative;
 }

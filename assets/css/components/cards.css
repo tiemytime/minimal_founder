@@ -30,11 +30,9 @@
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    /* More pronounced lift */
+    transform: translateY(-6px);
     background: var(--color-white);
-    border-color: rgba(10, 25, 47, 0.06);
-    box-shadow: 0 12px 32px rgba(10, 25, 47, 0.08);
+    border-color: rgba(10, 25, 47, 0.12);
 }
 
 .card:hover::before {

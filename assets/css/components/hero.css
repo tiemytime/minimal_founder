@@ -12,22 +12,7 @@
     position: relative;
 }
 
-/* Subtle visual interest without breaking PRD - using pseudo-element */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1400px;
-    height: 100%;
-    background: radial-gradient(ellipse at 50% 0%,
-            rgba(10, 25, 47, 0.015) 0%,
-            transparent 50%);
-    pointer-events: none;
-    z-index: 0;
-}
+/* Pure white background - PRD compliant */
 
 .hero>* {
     position: relative;

@@ -81,10 +81,10 @@ body {
     bottom: calc(var(--space-128) * -0.4);
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-navy), transparent);
-    opacity: 0.25;
+    width: 60px;
+    height: 2px;
+    background: var(--color-navy);
+    opacity: 0.2;
 }
 
 .section__title {

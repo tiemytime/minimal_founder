@@ -17,9 +17,9 @@
 }
 
 .testimonial:hover {
-    transform: translateX(6px);
+    transform: translateX(8px);
     border-left-width: 5px;
-    box-shadow: -8px 0 24px rgba(10, 25, 47, 0.06);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .testimonial::before {

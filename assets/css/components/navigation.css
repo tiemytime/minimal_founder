@@ -13,34 +13,14 @@
     transition: all var(--transition-medium);
 }
 
-/* Enhanced scrolled state */
+/* Enhanced scrolled state - PRD compliant */
 .nav.scrolled {
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     padding: var(--space-20) 0;
-    border-bottom-color: rgba(0, 0, 0, 0.06);
+    border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
-/* Subtle top accent line for premium feel */
-.nav::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(10, 25, 47, 0.1) 20%,
-            rgba(10, 25, 47, 0.1) 80%,
-            transparent);
-    opacity: 0;
-    transition: opacity var(--transition-medium);
-}
-
-.nav.scrolled::before {
-    opacity: 1;
-}
+/* Removed gradient - PRD compliant */
 
 .nav__container {
     max-width: var(--container-max);
@@ -99,16 +79,15 @@
     padding: var(--space-8) 0;
 }
 
-/* Elegant underline animation */
+/* Elegant underline animation - PRD compliant */
 .nav__link::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-navy), transparent);
+    background: var(--color-navy);
     transition: width var(--transition-medium);
 }
 
@@ -120,6 +99,7 @@
 .nav__link:hover::after,
 .nav__link:focus::after {
     width: 100%;
+    left: 0;
 }
 
 /* Active link indicator */
@@ -136,45 +116,24 @@
     background: var(--color-navy);
     color: var(--color-white);
     padding: var(--space-16) var(--space-48);
-    border: none;
+    border: 2px solid var(--color-navy);
     cursor: pointer;
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     transition: all var(--transition-medium);
-    box-shadow: 0 2px 12px rgba(10, 25, 47, 0.15);
     position: relative;
-    overflow: hidden;
-}
-
-/* Subtle shine effect on hover */
-.nav__cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent);
-    transition: left 0.5s;
-}
-
-.nav__cta:hover::before {
-    left: 100%;
 }
 
 .nav__cta:hover,
 .nav__cta:focus {
+    opacity: 0.9;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(10, 25, 47, 0.25);
 }
 
 .nav__cta:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(10, 25, 47, 0.2);
+    opacity: 1;
 }
 
 .nav__toggle {

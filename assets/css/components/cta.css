@@ -8,22 +8,7 @@
     position: relative;
 }
 
-/* Subtle visual interest without breaking PRD */
-.cta-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 1000px;
-    height: 100%;
-    background: radial-gradient(ellipse at 50% 50%,
-            rgba(10, 25, 47, 0.015) 0%,
-            transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-}
+/* Pure white background - PRD compliant */
 
 .cta-section__content {
     max-width: 700px;
