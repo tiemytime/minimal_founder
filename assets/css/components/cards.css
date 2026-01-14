@@ -1,4 +1,4 @@
-/* Cards Component - Professional Polish */
+/* Cards Component */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -8,7 +8,7 @@
 
 .card {
     padding: var(--space-64) var(--space-48);
-    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms ease, border-color 300ms ease;
     background: var(--color-white);
     border: 1px solid rgba(0, 0, 0, 0.04);
     border-radius: 2px;
@@ -21,18 +21,16 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
     background: var(--color-navy);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 2px 2px 0 0;
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    background: var(--color-white);
-    border-color: rgba(10, 25, 47, 0.15);
+    transform: translateY(-4px);
+    border-color: rgba(10, 25, 47, 0.1);
 }
 
 .card:hover::before {

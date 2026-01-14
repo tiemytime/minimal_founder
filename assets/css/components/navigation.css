@@ -1,4 +1,4 @@
-/* Navigation Component */
+/* Navigation */
 .nav {
     position: fixed;
     top: 0;
@@ -10,7 +10,7 @@
     z-index: var(--z-nav);
     padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: padding 300ms ease, border-color 300ms ease;
 }
 
 .nav.scrolled {
@@ -46,7 +46,7 @@
     width: 0;
     height: 2px;
     background: var(--color-navy);
-    transition: width var(--transition-medium);
+    transition: width 300ms ease;
 }
 
 .nav__logo:hover::after,
@@ -84,7 +84,7 @@
     width: 0;
     height: 2px;
     background: var(--color-navy);
-    transition: width var(--transition-medium);
+    transition: width 300ms ease;
 }
 
 .nav__link:hover,
@@ -117,15 +117,13 @@
     font-family: inherit;
     font-size: 14px;
     font-weight: 500;
-    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms ease, transform 250ms ease;
     position: relative;
 }
 
 .nav__cta:hover,
 .nav__cta:focus {
     opacity: 0.9;
-    transform: translateY(-2px);
-    border-color: rgba(10, 25, 47, 0.8);
 }
 
 .nav__cta:active {

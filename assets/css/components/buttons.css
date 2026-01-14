@@ -1,4 +1,4 @@
-/* Button Component - Professional Polish */
+/* Button Component */
 .btn {
     display: inline-block;
     padding: 0 var(--space-64);
@@ -8,7 +8,7 @@
     text-decoration: none;
     border: 2px solid transparent;
     cursor: pointer;
-    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms ease, opacity 250ms ease;
     height: 52px;
     line-height: 48px;
     letter-spacing: -0.01em;
@@ -52,7 +52,7 @@
     width: 0;
     height: 100%;
     background: var(--color-navy);
-    transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 350ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
 }
 
@@ -65,14 +65,12 @@
 .btn--secondary:focus {
     color: var(--color-white);
     border-color: var(--color-navy);
-    transform: translateY(-2px);
 }
 
 .btn--secondary:active {
     transform: translateY(0);
 }
 
-/* Touch-friendly on mobile */
 @media (max-width: 768px) {
     .btn {
         min-width: 44px;

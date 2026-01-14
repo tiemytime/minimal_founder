@@ -1,14 +1,11 @@
-/* CTA Section Component */
+/* CTA Section */
 .cta-section {
     text-align: center;
     padding: var(--space-256) var(--space-48);
-    /* Maximum whitespace for premium feel */
     background: var(--color-white);
-    border-top: 1px solid var(--color-gray-light);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
     position: relative;
 }
-
-/* Pure white background - PRD compliant */
 
 .cta-section__content {
     max-width: 700px;
@@ -24,7 +21,6 @@
 
 .cta-section p {
     margin: 0 auto var(--space-80);
-    /* More space before buttons */
     color: var(--color-gray-dark);
     font-size: 20px;
     line-height: 1.7;
@@ -33,7 +29,6 @@
 .cta-section__actions {
     display: flex;
     gap: var(--space-32);
-    /* More generous gap */
     justify-content: center;
     align-items: center;
 }
