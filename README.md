@@ -1,42 +1,36 @@
-# Premium Minimal Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Pure HTML, CSS, and vanilla JavaScript. No frameworks, no build tools, no dependencies.
+## Getting Started
 
+First, run the development server:
 
-## What's Inside
-
-```
-assets/
-  css/
-    main.css, variable.css, typography.css, layout.css
-    components/ (navigation, hero, buttons, cards, etc.)
-  js/
-    navigation.js, scroll-animation.js, scroll-progress.js
-```
-
-
-## Running It
-
-Open `index.html` in a browser. That's it.
-
-Or if you want a server:
 ```bash
-python -m http.server 8000
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Design Decisions
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-**Colors:** Three is enough. More would be noise.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-**Typography:** Noto Sans at specific sizes. H1 is 56px/400 weight. Body is 18px. Every size matters.
+## Learn More
 
-**Spacing:** 8px base unit. Scale: 8, 16, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256. Consistent rhythm.
+To learn more about Next.js, take a look at the following resources:
 
-**Animations:** 600ms for scroll effects, 300-400ms for interactions. Cubic-bezier timing. Respects reduced-motion.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**No shadows:** Depth through borders and transforms instead. Cleaner and faster.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-**No gradients:** Solid colors only. Forces intentional design.
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
