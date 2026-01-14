@@ -20,20 +20,25 @@ export function Problem() {
   return (
     <section id="problem" className="bg-black/[0.02] py-24 md:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
-        <div className="mb-16 max-w-2xl">
-          <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
+        <div className="mb-20 max-w-2xl">
+          <h2 className="text-4xl font-medium tracking-tight md:text-5xl">
             The Challenge of Finding Great Founders
           </h2>
-          <p className="mt-4 text-lg text-black/60">
+          <p className="mt-6 text-xl leading-relaxed text-black/60">
             Traditional hiring fails to capture what makes founders exceptional
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {challenges.map((challenge, index) => (
-            <div key={index} className="rounded-lg bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-medium">{challenge.title}</h3>
-              <p className="mt-3 leading-relaxed text-black/60">
+            <div
+              key={index}
+              className="group rounded-2xl bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              <h3 className="text-xl font-medium transition-colors group-hover:text-black/80">
+                {challenge.title}
+              </h3>
+              <p className="mt-4 leading-relaxed text-black/60">
                 {challenge.description}
               </p>
             </div>
