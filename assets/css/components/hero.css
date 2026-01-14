@@ -12,24 +12,18 @@
     position: relative;
 }
 
-/* Pure white background - PRD compliant */
-
-.hero>* {
-    position: relative;
-    z-index: 1;
-}
-
-/* Elegant scroll hint button */
+/* Elegant scroll hint button - Centered bottom position */
 .hero__scroll-hint {
     position: absolute;
-    bottom: var(--space-48);
+    bottom: 48px;
     left: 50%;
     transform: translateX(-50%);
     background: none;
     border: none;
-    padding: var(--space-16);
+    padding: 16px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 100;
+    /* Ensure scroll hint is above all content */
     transition: all var(--transition-fast);
 }
 
@@ -70,6 +64,8 @@
 
 .hero__content {
     max-width: 900px;
+    position: relative;
+    z-index: 2;
     animation: fadeInUp 800ms ease-out;
 }
 
@@ -139,7 +135,8 @@
     }
 
     .hero__scroll-hint {
-        bottom: var(--space-32);
+        bottom: 32px;
+        /* Reduced spacing on mobile */
     }
 
     .hero__scroll-arrow {
