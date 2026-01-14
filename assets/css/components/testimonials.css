@@ -1,4 +1,4 @@
-/* Testimonials Component - Professional Polish */
+/* Testimonials Component */
 .testimonials {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
